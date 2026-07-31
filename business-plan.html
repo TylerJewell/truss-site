@@ -55,6 +55,10 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;margin:0;line-height:1.05;
 .projtable tbody td{font-family:var(--f-mono);font-variant-numeric:tabular-nums slashed-zero;color:var(--text)}
 .projtable .gap{width:14px;padding:0;border-left:1px solid var(--hair);background:var(--bg)}
 .projtable .proj{color:var(--accent);font-weight:600}
+.projtable--tight{max-width:340px;margin-left:auto;margin-top:10px}
+.projtable--tight table{font-size:.78rem}
+.projtable--tight th,.projtable--tight td{padding:5px 9px}
+.projtable--tight thead tr th{border-top:0;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .tcap{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.06em;color:var(--muted);margin-top:8px}
 .commentary{margin-top:18px;border:1px dashed var(--steel);border-radius:3px;padding:18px 20px;background:var(--panel)}
 .commentary .cl{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:flex;align-items:center;gap:.5rem}
@@ -156,15 +160,15 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;margin:0;line-height:1.05;
         <li><b>Speed up the bidding.</b> Software that drafts quotes off your own history, so the estimators get more out the door. The estimator and the PE still sign off on every one.</li>
         <li><b>Go straight to the general contractors.</b> Most of the commercial work comes in through framers today. I'd add the GCs directly and keep the framers too.</li>
         <li><b>Run a second shift once the work is there.</b> The plant ran two shifts for years, and the equipment's still here. Bringing one shift back takes no capex. Running both shifts in parallel — and adding redundancy so a saw outage doesn't stop the plant — takes about $600K. We've priced it out:
-          <div class="projtable" style="margin-top:10px;max-width:520px">
+          <div class="projtable projtable--tight">
             <table>
               <thead>
                 <tr><th>Item</th><th>Cost</th></tr>
               </thead>
               <tbody>
-                <tr><td>Second component saw (used)</td><td>$200–275K</td></tr>
-                <tr><td>Auto-jigging retrofit, per gantry table</td><td>$50–150K</td></tr>
-                <tr><td>Virtek-class laser projection, per zone</td><td>$30–80K</td></tr>
+                <tr><td>Second saw (used)</td><td>$200–275K</td></tr>
+                <tr><td>Auto-jigging, per table</td><td>$50–150K</td></tr>
+                <tr><td>Laser projection, per zone</td><td>$30–80K</td></tr>
               </tbody>
             </table>
           </div>
