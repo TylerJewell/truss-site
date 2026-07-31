@@ -1,6 +1,7 @@
 # Truss Components of Oregon — Growth Plan
 
 **Prepared by Tyler Jewell for Fred Prosser, Todd Fieken, and Ike Isakson** · July 2026
+**Confidential property of Tyler Jewell.**
 
 ---
 
