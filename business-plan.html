@@ -61,7 +61,21 @@ h1,h2,h3{font-family:var(--f-display);font-weight:700;margin:0;line-height:1.05;
 .commentary .cl::before{content:"";width:17px;height:10px;background:var(--accent);-webkit-mask:var(--mark) no-repeat center/contain;mask:var(--mark) no-repeat center/contain}
 .commentary p{color:var(--muted);font-style:italic;margin:0;font-size:.92rem}
 .foot{border-top:1px solid var(--hair);padding:20px clamp(28px,5vw,52px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;color:var(--muted)}
-@media (max-width:640px){ .tblock div{padding-right:14px;margin-right:14px} }
+@media (max-width:640px){
+  body{font-size:16px;line-height:1.6}
+  .sheet{margin:0;border-left:0;border-right:0;box-shadow:none}
+  .mast{padding:26px 20px 0}
+  .doc{padding:26px 20px}
+  .block{margin-top:28px}
+  .tblock div{padding-right:14px;margin-right:14px}
+  .note{font-size:1.05rem;padding-left:16px}
+  .points li{padding-left:26px}
+  .projtable{margin-left:-4px;margin-right:-4px}
+  .projtable table{font-size:.82rem}
+  .projtable th,.projtable td{padding:7px 9px}
+  .projtable .gap{width:8px}
+  .foot{flex-direction:column;gap:6px}
+}
 @media print{ body{background:#fff} .sheet{box-shadow:none;border:0;margin:0;max-width:none} .mast .grid{display:none} }
 </style>
 </head>
