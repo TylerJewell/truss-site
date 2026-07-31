@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Truss Components of Oregon — Growth Plan</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F2C3A'/%3E%3Cpath d='M6 25 L16 8 L26 25 Z' fill='none' stroke='%23D88E38' stroke-width='2.4' stroke-linejoin='round'/%3E%3Cpath d='M16 8 V25 M11 16.5 L16 25 M21 16.5 L16 25' fill='none' stroke='%238CA5B2' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#E6EAEB; --sheet:#FBFCFC; --panel:#F1F4F4; --text:#15242C; --text-2:#42535D; --muted:#697C88;
+  --hair:#CBD3D8; --accent:#B26A18; --steel:#5F7482;
+  --brand:#0F2C3A; --brand-2:#0A2029; --brand-text:#DEE8ED; --brand-muted:#8CA5B2; --brand-accent:#D88E38;
+  --brand-hair:rgba(255,255,255,.14);
+  --f-display:"Bahnschrift","DIN Alternate","Franklin Gothic Medium","Helvetica Neue",Arial,sans-serif;
+  --f-body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"Cascadia Code","Consolas",Menlo,monospace;
+  --mark:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='15' viewBox='0 0 26 15' fill='none' stroke='%23000' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M1 14 L13 2 L25 14 M1 14 H25' stroke-width='1.8'/%3E%3Cpath d='M13 2 V14 M7 8 L13 14 M19 8 L13 14' stroke-width='1'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:15px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--hair) 1px,transparent 1px),linear-gradient(90deg,var(--hair) 1px,transparent 1px);
+  background-size:34px 34px;background-attachment:fixed}
+.num{font-variant-numeric:tabular-nums lining-nums slashed-zero}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;margin:0;line-height:1.05;letter-spacing:.01em}
+.sheet{max-width:860px;margin:32px auto;background:var(--sheet);border:1px solid var(--hair);box-shadow:0 30px 70px -40px rgba(10,30,40,.5)}
+.mast{background:radial-gradient(120% 160% at 82% 0%,var(--brand),var(--brand-2) 72%);color:var(--brand-text);padding:34px clamp(28px,5vw,52px) 0;position:relative;overflow:hidden}
+.mast .grid{position:absolute;inset:0;opacity:.5;pointer-events:none;background-image:linear-gradient(var(--brand-hair) 1px,transparent 1px),linear-gradient(90deg,var(--brand-hair) 1px,transparent 1px);background-size:38px 38px;-webkit-mask-image:radial-gradient(120% 100% at 75% 0,#000 30%,transparent 82%)}
+.mast-top{position:relative;display:flex;align-items:center;gap:.7rem;margin-bottom:26px}
+.mast-top b{font-family:var(--f-display);font-weight:700;font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase}
+.mast h1{position:relative;font-size:clamp(2rem,5vw,3rem);letter-spacing:-.01em;line-height:.98;color:var(--brand-text)}
+.mast h1 .am{color:var(--brand-accent)}
+.tblock{position:relative;display:flex;flex-wrap:wrap;margin-top:24px;border-top:1px solid var(--brand-hair)}
+.tblock div{padding:12px 22px 14px 0;margin-right:22px;border-right:1px solid var(--brand-hair)}
+.tblock div:last-child{border-right:0}
+.tblock .k{font-family:var(--f-mono);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brand-muted)}
+.tblock .v{font-family:var(--f-display);font-weight:700;font-size:.95rem;letter-spacing:.03em;margin-top:3px}
+.doc{padding:clamp(28px,5vw,52px)}
+.eyebrow{font-family:var(--f-mono);font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:.6rem;margin-bottom:12px}
+.eyebrow::before{content:"";width:22px;height:13px;flex:0 0 auto;background:var(--accent);-webkit-mask:var(--mark) no-repeat center/contain;mask:var(--mark) no-repeat center/contain}
+.note{font-size:1.1rem;line-height:1.6;color:var(--text);border-left:3px solid var(--accent);padding-left:20px;margin:0}
+.block{margin-top:34px}
+.block>p{color:var(--text-2)}
+.kept{margin-top:16px;color:var(--text)}
+.points{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.points li{padding-left:28px;position:relative;color:var(--text-2)}
+.points li::before{content:"";position:absolute;left:0;top:.36em;width:17px;height:10px;background:var(--accent);-webkit-mask:var(--mark) no-repeat center/contain;mask:var(--mark) no-repeat center/contain}
+.points li b{color:var(--text);font-weight:700}
+.projtable{border:1px solid var(--hair);border-radius:3px;overflow-x:auto;margin-top:14px}
+.projtable table{width:100%;border-collapse:collapse;font-size:.92rem}
+.projtable th,.projtable td{padding:9px 12px;text-align:right;border-top:1px solid var(--hair)}
+.projtable th:first-child,.projtable td:first-child{text-align:left;color:var(--text-2)}
+.projtable thead tr:first-child th{border-top:0;font-family:var(--f-mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;padding-bottom:2px}
+.projtable thead tr:last-child th{font-family:var(--f-mono);font-size:.66rem;color:var(--muted);font-weight:600}
+.projtable tbody td{font-family:var(--f-mono);font-variant-numeric:tabular-nums slashed-zero;color:var(--text)}
+.projtable .gap{width:14px;padding:0;border-left:1px solid var(--hair);background:var(--bg)}
+.projtable .proj{color:var(--accent);font-weight:600}
+.tcap{font-family:var(--f-mono);font-size:.6rem;letter-spacing:.06em;color:var(--muted);margin-top:8px}
+.commentary{margin-top:18px;border:1px dashed var(--steel);border-radius:3px;padding:18px 20px;background:var(--panel)}
+.commentary .cl{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:flex;align-items:center;gap:.5rem}
+.commentary .cl::before{content:"";width:17px;height:10px;background:var(--accent);-webkit-mask:var(--mark) no-repeat center/contain;mask:var(--mark) no-repeat center/contain}
+.commentary p{color:var(--muted);font-style:italic;margin:0;font-size:.92rem}
+.foot{border-top:1px solid var(--hair);padding:20px clamp(28px,5vw,52px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.06em;color:var(--muted)}
+@media (max-width:640px){ .tblock div{padding-right:14px;margin-right:14px} }
+@media print{ body{background:#fff} .sheet{box-shadow:none;border:0;margin:0;max-width:none} .mast .grid{display:none} }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="mast">
+    <div class="grid" aria-hidden="true"></div>
+    <div class="mast-top">
+      <svg width="34" height="27" viewBox="0 0 38 30" fill="none" aria-hidden="true">
+        <path d="M2 27 L19 4 L36 27 Z" stroke="var(--brand-accent)" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M2 27 H36 M19 4 V27 M10.5 15.5 L19 27 M27.5 15.5 L19 27" stroke="var(--brand-text)" stroke-width="1.5" opacity=".55"/>
+      </svg>
+      <b>Truss Components of Oregon</b>
+    </div>
+    <h1><span class="am">Growth</span> plan.</h1>
+    <div class="tblock">
+      <div><div class="k">Prepared by</div><div class="v">Tyler Jewell</div></div>
+      <div><div class="k">For</div><div class="v">Fred Prosser, Todd Fieken &amp; Ike Isakson</div></div>
+      <div><div class="k">Date</div><div class="v num">July 2026</div></div>
+    </div>
+  </header>
+
+  <div class="doc">
+
+    <section>
+      <p class="note">I want to buy Truss Components of Oregon, and I want to run it the way you've run it. You'd keep 20%. This is my thinking on where I'd take the business and what I believe it can earn.</p>
+    </section>
+
+    <section class="block">
+      <span class="eyebrow">The company today</span>
+      <p>Here's what it has going for it:</p>
+      <ul class="points">
+        <li>About 150 customers across Oregon and Washington who count on you to deliver on time and get it right.</li>
+        <li>Every truss engineered to load and stamped by a licensed Professional Engineer.</li>
+        <li>Foremen and sawyers who've been on the floor 15, 20, even 30 years. People don't leave.</li>
+        <li>Your own trucks and a 22-ton crane, so you deliver and set the trusses yourselves, right on the plate line.</li>
+        <li>Forty years of bids in the Alpine system: every job you laid out, what it cost, what you charged, and whether you won it.</li>
+      </ul>
+      <p class="kept">I wouldn't touch any of it.</p>
+    </section>
+
+    <section class="block">
+      <span class="eyebrow">What I'd leave alone</span>
+      <ul class="points">
+        <li>The quality, and the promise to hit the delivery date.</li>
+        <li>The crew. If anything, I'd give everyone who works here a share of the ownership.</li>
+        <li>The engineering, and the PE stamp on every job.</li>
+        <li>The name. I'm not putting a new sign out front.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <span class="eyebrow">How contractors choose a supplier</span>
+      <p>When a contractor picks a truss supplier, price usually isn't what decides it. A few things matter more:</p>
+      <ul class="points">
+        <li><b>Delivery on time.</b> A late load of trusses leaves the framing crew standing around. Contractors also want a straight answer when a date is going to slip.</li>
+        <li><b>Getting the design right.</b> A mistake turns into a fix in the field and a backcharge.</li>
+        <li><b>Drawings the building department will sign off on.</b> PE-stamped and to code.</li>
+        <li><b>A little help up front.</b> Catch a framing problem in the plans and you save the contractor money.</li>
+        <li><b>A quote that comes back fast and is right.</b></li>
+      </ul>
+      <p style="margin-top:16px">You already do all of this.</p>
+      <p style="margin-top:14px">The big suppliers — Parr, Builders FirstSource, Pacific Lumber — have the scale, but they're built for volume, and a small or custom or ag job goes to the back of the line. The smaller shops — Oregon Truss, Precision, Ariel — have the relationships, but their websites are thin, you can't get a quote online, and none of them show their credentials. You can do the engineering and the delivery and still be easy to get a quote out of. Nobody else in this market does both.</p>
+      <p style="margin-top:14px">Getting in front of more contractors takes two things:</p>
+      <ul class="points">
+        <li><b>Reach.</b> Widen and maximize exposure to every general contractor in Oregon and Washington, through a website, a salesperson calling on general contractors, and a presence in the commercial plan rooms.</li>
+        <li><b>Bidding.</b> Right now every quote gets built by hand, so there's a ceiling on how many jobs you can go after. Software that drafts the quote off your own past bids lets the same estimators put out a lot more of them, without getting sloppy.</li>
+      </ul>
+      <p style="margin-top:16px">You still build trusses the same way. When there's more work, you add a second shift, and the equipment for it is already here.</p>
+    </section>
+
+    <section class="block">
+      <span class="eyebrow">How I'd grow it</span>
+      <p>Here's what I'd do:</p>
+      <ul class="points">
+        <li><b>Market the place.</b> A website, and outreach to more builders.</li>
+        <li><b>Speed up the bidding.</b> Software that drafts quotes off your own history, so the estimators get more out the door. The estimator and the PE still sign off on every one.</li>
+        <li><b>Go straight to the general contractors.</b> Most of the commercial work comes in through framers today. I'd add the GCs directly and keep the framers too.</li>
+        <li><b>Run a second shift once the work is there.</b> The plant ran two shifts for years, and the equipment's still here for it. I'd bring the shift back once there's enough work to keep it busy.</li>
+        <li><b>Look at Bend, Salem, or Eugene down the road.</b> Buy a small shop or add capacity out there when the timing's right.</li>
+        <li><b>Give the crew a stake.</b> People who own a piece of the place tend to stick around.</li>
+        <li><b>Get the estimating knowledge into a system,</b> so a new estimator prices a job the way the shop always has.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <span class="eyebrow">The numbers, and your stake</span>
+      <p>You keep 20%. As the business grows, your 20% is worth more.</p>
+      <div class="projtable">
+        <table>
+          <thead>
+            <tr><th></th><th colspan="4">Actual</th><th class="gap"></th><th colspan="4">Projected</th></tr>
+            <tr><th></th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th class="gap"></th><th>2027</th><th>2028</th><th>2029</th><th>2030</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Contracts</td><td>400</td><td>380</td><td>340</td><td>330</td><td class="gap"></td><td class="proj">400</td><td class="proj">440</td><td class="proj">500</td><td class="proj">555</td></tr>
+            <tr><td>Avg price ($K)</td><td>42.8</td><td>35.0</td><td>25.3</td><td>23.6</td><td class="gap"></td><td class="proj">23.8</td><td class="proj">25.0</td><td class="proj">26.0</td><td class="proj">27.0</td></tr>
+            <tr><td>Revenue ($M)</td><td>17.1</td><td>13.3</td><td>8.6</td><td>7.8</td><td class="gap"></td><td class="proj">9.5</td><td class="proj">11.0</td><td class="proj">13.0</td><td class="proj">15.0</td></tr>
+            <tr><td>Pre-tax profit ($M)</td><td>4.8</td><td>4.2</td><td>1.6</td><td>1.2</td><td class="gap"></td><td class="proj">1.7</td><td class="proj">2.2</td><td class="proj">2.8</td><td class="proj">3.6</td></tr>
+            <tr><td>Multiple</td><td></td><td></td><td></td><td></td><td class="gap"></td><td class="proj">4.3×</td><td class="proj">4.8×</td><td class="proj">5.3×</td><td class="proj">5.8×</td></tr>
+            <tr><td>Enterprise value ($M)</td><td></td><td></td><td></td><td></td><td class="gap"></td><td class="proj">7.3</td><td class="proj">10.6</td><td class="proj">14.8</td><td class="proj">20.9</td></tr>
+            <tr><td>Your 20% ($M)</td><td></td><td></td><td></td><td></td><td class="gap"></td><td class="proj">1.5</td><td class="proj">2.1</td><td class="proj">3.0</td><td class="proj">4.2</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tcap">Actuals through 2025 · 2027–2030 projected · contracts and average price are rough estimates</div>
+      <div class="commentary">
+        <div class="cl">How we get there</div>
+        <p style="font-style:normal;color:var(--text-2)">The growth is in the number of contracts. The shop runs around 330 jobs a year now. Widening exposure to general contractors and using software to draft quotes off past bids lets the same estimators put out more bids, so I expect the count to reach about 555 by 2030. Average price recovers as lumber settles. The second shift and the faster bidding lift the margin, which is what takes profit to $3.6M. I add the shift once the orders are there.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <span class="eyebrow">What I bring</span>
+      <p>I've run four companies. The last three sold for $4M, $40M, and $670M. The one I run now is an AI company that's grown 400% in the last year.</p>
+      <ul class="points">
+        <li>I pay for the technology, the marketing, and the systems work myself. It doesn't touch the company's cash.</li>
+        <li>I don't add capacity until the orders are there to fill it.</li>
+        <li>I won't make a change that drops the quality or pushes a delivery date.</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer class="foot">
+    <span>Prepared by Tyler Jewell · July 2026</span>
+    <span>For the owners of Truss Components of Oregon</span>
+  </footer>
+
+</div>
+</body>
+</html>
