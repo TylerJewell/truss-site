@@ -80,6 +80,7 @@ You keep 20%. As the business grows, your 20% is worth more.
 
 I've run four companies. The last three sold for $4M, $40M, and $670M. The one I run now is an AI company that's grown 400% in the last year.
 
+- Elkridge, my firm, provides ongoing operational involvement and oversight.
 - I pay for the technology, the marketing, and the systems work myself. It doesn't touch the company's cash.
 - I don't add capacity until the orders are there to fill it.
 - I won't make a change that drops the quality or pushes a delivery date.
