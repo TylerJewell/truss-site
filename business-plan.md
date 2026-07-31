@@ -80,7 +80,7 @@ You keep 20%. As the business grows, your 20% is worth more.
 
 I've run four companies. The last three sold for $4M, $40M, and $670M. The one I run now is an AI company that's grown 400% in the last year.
 
-- Elkridge, a partner on this deal, provides ongoing operational involvement and oversight.
+- Elkridge Advisors, a partner on this deal, provides week-to-week operational oversight. Their operators have worked with more than 300 companies across 19 countries.
 - I pay for the technology, the marketing, and the systems work myself. It doesn't touch the company's cash.
 - I don't add capacity until the orders are there to fill it.
 - I won't make a change that drops the quality or pushes a delivery date.
